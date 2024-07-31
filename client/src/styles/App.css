@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --primary-color: #0dff92;
+  --dark-color: #1e1e1e;
+  --light-color: #f0f0f0;
+  --accent-color: #faff5a;
+  --border-color: #444444;
+  --container-bg: #2c2c2c;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: var(--dark-color);
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container .title {
+  font-size: 2.5em;
+  text-align: center;
+  color: var(--light-color);
+  border: 3px solid var(--light-color);
+  padding: 0.5em;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container .questions {
+  padding: 2em;
+}
+
+.container .grid {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+}
+
+.container .btn {
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1em;
+  color: var(--light-color);
+  background-color: var(--primary-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container .btn:hover {
+  cursor: pointer;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.next {
+  background-color: var(--primary-color);
+  justify-self: flex-end;
+}
+
+.prev {
+  background-color: var(--accent-color);
+  justify-self: flex-start;
+}
+
+ul li {
+  color: #dddddd;
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: #333333;
+  transition: background-color 0.3s;
+}
+
+ul li:hover {
+  background-color: var(--primary-color);
+}
+
+ul li input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+ul li label {
+  display: block;
+  position: relative;
+  font-weight: 400;
+  font-size: 1.2em;
+  padding-left: 40px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+ul li label:hover {
+  color: var(--light-color);
+}
+
+ul li .check {
+  display: block;
+  position: absolute;
+  border: 3px solid #dddddd;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: border 0.3s;
+}
+
+ul li:hover .check {
+  border: 3px solid var(--light-color);
+}
+
+ul li .check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  top: 4px;
+  left: 4px;
+  background-color: transparent;
+  transition: background 0.3s;
+}
+
+input[type="radio"]:checked ~ .check {
+  border: 3px solid var(--primary-color);
+}
+
+input[type="radio"]:checked ~ .check::before {
+  background-color: var(--primary-color);
+}
+
+input[type="radio"]:checked ~ .text-primary {
+  color: var(--primary-color);
+}

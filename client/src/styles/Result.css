@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+:root {
+  --primary-color: #0dff92;
+  --dark-color: #1e1e1e;
+  --light-color: #f0f0f0;
+  --accent-color: #faff5a;
+  --border-color: #444444;
+  --container-bg: #2c2c2c;
+  --table-header-bg: #333333;
+  --table-body-bg: #444444;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3em 4em;
+  gap: 1em;
+  background-color: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.container .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .flex span {
+  font-size: 1.4em;
+  color: var(--light-color);
+}
+
+.container .flex span.achive {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  color: var(--light-color);
+  font-size: 1.1em;
+  text-align: center;
+  background: var(--table-header-bg);
+  padding: 18px 0;
+}
+
+.table-body {
+  font-size: 1.1em;
+  text-align: center;
+  background: var(--table-body-bg);
+  padding: 18px 0;
+  color: var(--light-color);
+}
+
+.table-header > tr > td {
+  border: 1px solid var(--accent-color);
+}
