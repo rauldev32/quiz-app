@@ -17,6 +17,7 @@ export const updateResult = (index) => async (dispatch) => {
   }
 };
 
+
 export const usePublishResult = (resultData) => {
   const { result, username } = resultData;
   (async () => {
